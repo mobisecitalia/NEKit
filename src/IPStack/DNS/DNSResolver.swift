@@ -11,27 +11,27 @@ public protocol DNSResolverDelegate: class {
 }
 
 open class UDPDNSResolver: DNSResolverProtocol, NWUDPSocketDelegate {
-    let socket: NWUDPSocket
-    public weak var delegate: DNSResolverDelegate?
+    public let socket: NWUDPSocket
+    open weak var delegate: DNSResolverDelegate?
 
     public init(address: IPAddress, port: Port) {
         socket = NWUDPSocket(host: address.presentation, port: Int(port.value))!
         socket.delegate = self
     }
 
-    public func resolve(session: DNSSession) {
+    open func resolve(session: DNSSession) {
         socket.write(data: session.requestMessage.payload)
     }
 
-    public func stop() {
+    open func stop() {
         socket.disconnect()
     }
 
-    public func didReceive(data: Data, from: NWUDPSocket) {
+    open func didReceive(data: Data, from: NWUDPSocket) {
         delegate?.didReceive(rawResponse: data)
     }
     
-    public func didCancel(socket: NWUDPSocket) {
+    open func didCancel(socket: NWUDPSocket) {
         
     }
 }
