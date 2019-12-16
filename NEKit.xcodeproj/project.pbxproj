@@ -288,6 +288,10 @@
 		36E9CD001DD6EEF5003597CE /* QueueFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E9CCFE1DD6EEF5003597CE /* QueueFactory.swift */; };
 		36E9CD041DD6F0DE003597CE /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F392B1DD2068E002BED59 /* Resolver.framework */; };
 		36E9CD051DD6F0DE003597CE /* Resolver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 360F392B1DD2068E002BED59 /* Resolver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6BE682D323A7ED630031836E /* BlockAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE682D223A7ED630031836E /* BlockAdapter.swift */; };
+		6BE682D423A7ED630031836E /* BlockAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE682D223A7ED630031836E /* BlockAdapter.swift */; };
+		6BE682D623A7EFBF0031836E /* BlockAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE682D523A7EFBF0031836E /* BlockAdapterFactory.swift */; };
+		6BE682D723A7EFBF0031836E /* BlockAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE682D523A7EFBF0031836E /* BlockAdapterFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -555,6 +559,8 @@
 		36DB3CEE1E0D610500D907DB /* IPAddressSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPAddressSpec.swift; sourceTree = "<group>"; };
 		36E44A011CF2ED4800185DBF /* TUNInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TUNInterface.swift; sourceTree = "<group>"; };
 		36E9CCFE1DD6EEF5003597CE /* QueueFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueueFactory.swift; path = Tunnel/QueueFactory.swift; sourceTree = "<group>"; };
+		6BE682D223A7ED630031836E /* BlockAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockAdapter.swift; sourceTree = "<group>"; };
+		6BE682D523A7EFBF0031836E /* BlockAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockAdapterFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -904,6 +910,7 @@
 				36B162321CDDA0F300F24C97 /* DirectAdapter.swift */,
 				366EB5AC1CDE0FCE00E0E942 /* HTTPAdapter.swift */,
 				368CBDA51D7911FA003CEA62 /* RejectAdapter.swift */,
+				6BE682D223A7ED630031836E /* BlockAdapter.swift */,
 				3623479F1D824E4300A047DE /* SOCKS5Adapter.swift */,
 				366EB5AD1CDE0FCE00E0E942 /* SecureHTTPAdapter.swift */,
 				366EB5C21CDF375B00E0E942 /* SpeedAdapter.swift */,
@@ -919,6 +926,7 @@
 				366EB5B21CDE150C00E0E942 /* AuthenticationServerAdapterFactory.swift */,
 				366EB5B31CDE150C00E0E942 /* HTTPAdapterFactory.swift */,
 				368CBDA21D7911D4003CEA62 /* RejectAdapterFactory.swift */,
+				6BE682D523A7EFBF0031836E /* BlockAdapterFactory.swift */,
 				362347A21D82525200A047DE /* SOCKS5AdapterFactory.swift */,
 				366EB5B41CDE150C00E0E942 /* SecureHTTPAdapterFactory.swift */,
 				366EB5B51CDE150C00E0E942 /* ServerAdapterFactory.swift */,
@@ -1387,6 +1395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE682D623A7EFBF0031836E /* BlockAdapterFactory.swift in Sources */,
 				36B2ACD91DDF407F00BD2C3D /* HMAC.swift in Sources */,
 				36BC589B1CF2A3D400E0E367 /* TUNTCPSocket.swift in Sources */,
 				36B3667B1D586CA1003343AA /* DNSFailRule.swift in Sources */,
@@ -1422,6 +1431,7 @@
 				366EB5B81CDE150C00E0E942 /* SecureHTTPAdapterFactory.swift in Sources */,
 				3629504B1D6AE30C001A30F6 /* ProxySocketEvent.swift in Sources */,
 				36411A5C1D167AA9005F4108 /* DNSSessionMatchResult.swift in Sources */,
+				6BE682D323A7ED630031836E /* BlockAdapter.swift in Sources */,
 				36411A651D167AF2005F4108 /* DirectRule.swift in Sources */,
 				366EB5C31CDF375B00E0E942 /* SpeedAdapter.swift in Sources */,
 				366EB5C91CE061C500E0E942 /* RuleParser.swift in Sources */,
@@ -1504,6 +1514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE682D723A7EFBF0031836E /* BlockAdapterFactory.swift in Sources */,
 				36B2ACDA1DDF407F00BD2C3D /* HMAC.swift in Sources */,
 				36C48D681CF88EC10071804F /* GeoIP.swift in Sources */,
 				36B3667C1D586CA1003343AA /* DNSFailRule.swift in Sources */,
@@ -1539,6 +1550,7 @@
 				3629504C1D6AE30C001A30F6 /* ProxySocketEvent.swift in Sources */,
 				36411A661D167AF2005F4108 /* DirectRule.swift in Sources */,
 				36C48D7A1CF88EDA0071804F /* DomainListRule.swift in Sources */,
+				6BE682D423A7ED630031836E /* BlockAdapter.swift in Sources */,
 				36C48D621CF88EB60071804F /* ShadowsocksAdapter.swift in Sources */,
 				36411A631D167AE0005F4108 /* AllRule.swift in Sources */,
 				368CBDA71D7911FA003CEA62 /* RejectAdapter.swift in Sources */,
