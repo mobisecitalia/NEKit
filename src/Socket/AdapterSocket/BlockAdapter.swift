@@ -19,7 +19,6 @@ public class BlockAdapter: AdapterSocket {
     public init(blacklistDelegate: BlockAdapterSocketDelegate?, delay: Int) {
         self.blacklistDelegate = blacklistDelegate
         self.delay = delay
-        super.init()
     }
     /**
      Connect to remote according to the `ConnectSession`.
@@ -33,14 +32,14 @@ public class BlockAdapter: AdapterSocket {
             return
         }
         
-//        if blacklistDelegate?.isBlocked(domain: session.host) ?? false {
-//            blacklisted = true
-//            QueueFactory.getQueue().asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.milliseconds(delay)) {
-//                [weak self] in
-//                self?.disconnect()
-//            }
-//            return
-//        }
+        if blacklistDelegate?.isBlocked(domain: session.host) ?? false {
+            blacklisted = true
+            QueueFactory.getQueue().asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.milliseconds(delay)) {
+                [weak self] in
+                self?.disconnect()
+            }
+            return
+        }
         
         do {
             try socket.connectTo(host: session.host, port: Int(session.port), enableTLS: false, tlsSettings: nil)
