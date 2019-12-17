@@ -19,6 +19,7 @@ public class BlockAdapter: AdapterSocket {
     public init(blacklistDelegate: BlockAdapterSocketDelegate?, delay: Int) {
         self.blacklistDelegate = blacklistDelegate
         self.delay = delay
+        super.init()
     }
     /**
      Connect to remote according to the `ConnectSession`.
